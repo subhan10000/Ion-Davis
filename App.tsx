@@ -34,6 +34,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import  Login from './src/screen/login';
 import  Signup from './src/screen/sign-up';
 import  ForgotPassword from './src/screen/forgot-password';
+import  Home from './src/screen/home';
 
 
 const Stack = createStackNavigator();
@@ -57,9 +58,14 @@ function App() {
         headerShown: false,
       }}
       />
+      <Stack.Screen name="Home" component={Home}
+      options={{
+        headerShown: false,
+      }}
+      />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
-export default App;
+ export default App;
