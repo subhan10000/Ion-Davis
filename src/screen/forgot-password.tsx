@@ -6,6 +6,7 @@ import {
   StatusBar,
   StyleSheet,
   TextInput,
+  Image,
   Text,
   useColorScheme,
   View,
@@ -26,7 +27,16 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 export default ForgotPassword = ({route, navigation }) => {
     return (
+      
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:colors.background, padding:16}}>
+      <View style={{alignItems:'flex-start', width:'100%', position:'absolute', left:16, top:16}}>
+      <TouchableOpacity
+          onPress={() =>
+            navigation.navigate('Login')
+          }>
+      <Image  source={require('../assets/images/icon.png')} /> 
+      </TouchableOpacity>
+    </View>  
     <Text style={{color:colors.white, marginBottom:20, fontSize:34,}}>Forgot Password</Text>
     <Text style={{color:colors.white, marginBottom:10, fontSize:14, textAlign:'center'}}>Please enter your email address. You will receive a link to reset your password</Text>
     
@@ -80,6 +90,7 @@ ftcolor:{
 },
 incolor:{
     color:colors.white,
-    height:40
+    height:40,
+
 }
 });

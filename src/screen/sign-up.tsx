@@ -7,6 +7,7 @@ import {
   StyleSheet,
   TextInput,
   Text,
+  Image,
   useColorScheme,
   View,
   Button,
@@ -25,11 +26,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 export default Signup = ({route, navigation }) => {
-    return (<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:colors.background, padding:16}}>
+    return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:colors.background, padding:16}}>
     <Text style={{color:colors.white, marginBottom:20, fontSize:34,}}>Sign Up</Text>
-    {/* <TextInput
-    style={styles.input}
-  /> */}
   <View style={{ paddingHorizontal:0, width:'100%'}}>
   <SafeAreaView>
   <View style={styles.inputde}>
@@ -56,11 +55,11 @@ export default Signup = ({route, navigation }) => {
                     <Text style={{color:colors.white, marginBottom:10, fontSize:14, textAlign:'right'}}
                     onPress={() =>
                         navigation.navigate('Login')
-                      }>Already have an account?</Text>
+                      }>Already have an account? <Image source={require('../assets/images/right-icon.png')} /></Text>
                 </View>
     <TouchableOpacity
           onPress={() =>
-            navigation.navigate('Signup')
+            navigation.navigate('Home')
           } style={{width:'100%'}}>
               <View style={{backgroundColor:colors.primary, padding:16, borderRadius:8, width:'100%', alignItems:'center' }}>
                   <Text style={{color:Colors.white, fontSize:18}}>
@@ -74,8 +73,11 @@ export default Signup = ({route, navigation }) => {
               <Text style={{color:colors.primary,}}  onPress={() =>
             navigation.navigate('Login')
           }> Sign In</Text></Text>
-                    <Text style={{color:colors.white, fontSize:14, textAlign:'center'}} >Or login Width facebook </Text>
+                    <Text style={{color:colors.white, fontSize:14, textAlign:'center'}} >Or Sign In Width facebook </Text>
                 </View>
+                <View style={{alignItems:'center', marginTop:10}}>
+          <Image source={require('../assets/images/logos_facebook.png')} /> 
+        </View>
     {/* <Button  title="LOGIN" 
     onPress={() => navigation.navigate('Signup')}   color="#D99100" 
 /> */}
