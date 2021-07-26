@@ -44,8 +44,8 @@ export default Login = ({route, navigation }) => {
           </View>
         </SafeAreaView>
         <View>
-          <Text style={{color:colors.white, marginBottom:10, fontSize:14, textAlign:'right'}} onPress={() =>
-                  navigation.navigate('ForgotPassword')
+          <Text style={{color:colors.white, marginBottom:10, fontSize:14, textAlign:'right'}} 
+          onPress={() => navigation.navigate('ForgotPassword')
                 }>Forgot Password <Image source={require('../assets/images/right-icon.png')} /></Text>
         </View>
         <TouchableOpacity
@@ -76,12 +76,6 @@ export default Login = ({route, navigation }) => {
     );
   }
   const styles = StyleSheet.create({
-    buttonStyle: {
-        color: 'red',
-        marginTop: 20,
-        padding: 20,
-        backgroundColor: 'green',
-    },
     inputde:{
         borderRadius:10,
         padding:10,
