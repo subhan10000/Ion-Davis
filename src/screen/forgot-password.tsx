@@ -69,12 +69,7 @@ export default ForgotPassword = ({route, navigation }) => {
 );
 }
 const styles = StyleSheet.create({
-buttonStyle: {
-    color: 'red',
-    marginTop: 20,
-    padding: 20,
-    backgroundColor: 'green',
-},
+
 inputde:{
     borderRadius:10,
     padding:10,

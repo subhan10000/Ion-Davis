@@ -35,6 +35,8 @@ import  Login from './src/screen/login';
 import  Signup from './src/screen/sign-up';
 import  ForgotPassword from './src/screen/forgot-password';
 import  Home from './src/screen/home';
+import Fontpage from './src/screen/tabs';
+
 
 
 const Stack = createStackNavigator();
@@ -59,6 +61,11 @@ function App() {
       }}
       />
       <Stack.Screen name="Home" component={Home}
+      options={{
+        headerShown: false,
+      }}
+      />
+      <Stack.Screen name="Fontpage" component={Fontpage}
       options={{
         headerShown: false,
       }}
